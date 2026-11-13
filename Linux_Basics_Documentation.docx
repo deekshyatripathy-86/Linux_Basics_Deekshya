@@ -1,0 +1,174 @@
+
+1. Task 1 -  Creating and Renaming Files and Directories
+
+Objective: Create a directory, create an empty file, and rename the file using Linux commands.
+
+Commands:
+
+bash
+mkdir test_dir
+touch test_dir/example.txt
+mv test_dir/example.txt test_dir/renamed_example.txt
+ls -l test_dir
+
+
+Explanation:
+
+mkdir creates a directory.
+touch creates an empty file.
+mv renames or moves a file.
+ls -l displays directory contents.
+
+Result: Successfully created test_dir and renamed the file to renamed_example.txt.
+
+2. Task 2 -  Viewing File Contents
+
+Objective: Display the contents of /etc/passwd.
+
+Commands:
+
+bash
+cat /etc/passwd
+head -n 5 /etc/passwd
+tail -n 5 /etc/passwd
+
+
+Explanation:
+
+cat displays the complete file.
+head -n 5 displays the first five lines.
+tail -n 5 displays the last five lines.
+
+Result: Successfully displayed the complete file, first five lines, and last five lines.
+
+Screenshot: [Insert Task 2 terminal screenshot here]
+
+3. Task 3 -  Searching for Patterns
+
+Objective: Find all lines containing the word "root" in /etc/passwd.
+
+Command:
+
+bash
+grep "root" /etc/passwd
+
+
+Explanation:
+
+The grep command searches for a specified pattern in a file and displays matching lines.
+
+Result: Successfully searched for all lines containing the word "root".
+
+Screenshot: [Insert Task 3 terminal screenshot here]
+
+4. Task 4 - Zipping and Unzipping
+
+Objective: Compress the test_dir directory and extract it into another directory.
+
+Commands:
+
+bash
+zip -r test_dir.zip test_dir
+mkdir unzipped_dir
+unzip test_dir.zip -d unzipped_dir
+ls -R unzipped_dir
+
+
+Explanation:
+
+zip -r compresses a directory recursively.
+mkdir creates the extraction directory.
+unzip extracts the ZIP archive.
+ls -R displays files recursively.
+
+Result: Successfully compressed and extracted the directory.
+
+Screenshot: [Insert Task 4 terminal screenshot here]
+
+5. Task 5 - Downloading Files
+
+Objective: Download a file from the internet using the wget command.
+
+Installation on macOS:
+
+bash
+brew install wget
+
+
+Download command:
+
+bash
+wget https://example.com/ -O sample.html
+
+
+Verification:
+
+bash
+ls -l sample.html
+
+
+Explanation:
+
+brew install wget installs wget using Homebrew.
+wget downloads files from URLs.
+-O specifies the downloaded file's name.
+ls -l verifies the downloaded file.
+
+Result: Successfully installed wget and downloaded a sample HTML file.
+
+Screenshot: [Insert Task 5 installation and download screenshots here]
+
+6. Task 6 - Changing File Permissions
+
+Objective: Create a file and make it read-only for everyone.
+
+Commands:
+
+bash
+touch secure.txt
+chmod 444 secure.txt
+ls -l secure.txt
+
+
+Explanation:
+
+touch creates an empty file.
+chmod changes file permissions.
+444 gives read permission to the owner, group, and others.
+ls -l verifies the permissions.
+
+Expected permission output:
+
+text
+-r--r--r--
+
+
+Result: Successfully changed the file permissions to read-only for everyone.
+
+Screenshot: [Insert Task 6 terminal screenshot here]
+
+7. Task 7 - Working with Environment Variables
+
+Objective: Create an environment variable named MY_VAR.
+
+Commands:
+
+bash
+export MY_VAR='Hello, Linux!'
+echo "$MY_VAR"
+
+
+Explanation:
+
+export creates an environment variable available to the current shell and its child processes.
+echo displays the variable's value.
+
+Expected output:
+
+text
+Hello, Linux!
+
+
+Result: Successfully created and displayed the environment variable.
+
+8. GitHub Repository
